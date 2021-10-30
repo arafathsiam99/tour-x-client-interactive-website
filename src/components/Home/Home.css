@@ -1,0 +1,38 @@
+.fs-1 {
+  color: tomato;
+  font-weight: 700;
+}
+.custom-img {
+  border-radius: 50%;
+  width: 25%;
+}
+.custom-btn {
+  background-color: #262339;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.custom-btn:hover {
+  background-color: tomato;
+  transition: 0.5s;
+}
+.custom-box {
+}
+.custom-card {
+  margin-left: 150px;
+}
+.custom-top {
+  color: tomato;
+}
+.custom-p {
+  color: rgb(223, 213, 213);
+  font-size: 20px;
+  font-weight: 100px;
+}
