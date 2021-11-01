@@ -6,25 +6,27 @@ const Packages = () => {
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/packages")
+    fetch("https://murmuring-basin-32976.herokuapp.com/packages")
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);
   return (
-    <div id="packages">
-      <div className="row container mx-auto">
+    <div className="container mx-auto">
+      <div className="row text-center">
         {packages.map((item) => (
-          <div className="col-md-4">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={item.img} />
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>{item.description}</Card.Text>
-                <Link to={`booking/${item._id}`}>
-                  <Button className="custom-btn">Book This Package</Button>
-                </Link>
-              </Card.Body>
-            </Card>
+          <div className="col-md-4 ">
+            <div className="shadow-sm mx-3 my-3">
+              <Card>
+                <Card.Img variant="top" src={item.img} />
+                <Card.Body>
+                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text>{item.description}</Card.Text>
+                  <Link to={`booking/${item._id}`}>
+                    <Button className="custom-btn">Book This Package</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
         ))}
       </div>

@@ -9,6 +9,8 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
+import ManageAllPackage from "./components/ManageAllPackage/ManageAllPackage";
+import MyOrders from "./components/MyOrders/MyOrders";
 import NotFound from "./components/NotFound/NotFound";
 import Packages from "./components/Packages/Packages";
 
@@ -34,8 +36,14 @@ function App() {
             <PrivateRoute exact path="/booking/:id">
               <Booking></Booking>
             </PrivateRoute>
-            <Route exact path="/addpackage">
+            <PrivateRoute exact path="/addpackage">
               <AddPackage></AddPackage>
+            </PrivateRoute>
+            <Route exact path="/myorders">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route exact path="/manageallpackage">
+              <ManageAllPackage></ManageAllPackage>
             </Route>
             <Route exact path="*">
               <NotFound></NotFound>

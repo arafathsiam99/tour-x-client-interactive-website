@@ -10,33 +10,32 @@ initializeAuthentication();
 const Login = () => {
   const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location.state?.from || "/booking";
+  const redirect_uri = location.state?.from || "/home";
   const auth = getAuth();
   const { user, googleSignIn, setUser } = Usefirebase();
 
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
-      setUser(result.user);
+      // setUser(result.user);
+      history.push(redirect_uri);
     });
-    history.push(redirect_uri);
   };
   return (
-    <div>
-      <div className="login-box d-flex align-items-center justify-content-center">
-        <div className="login">
-          <div className="login-box">
-            <h2 className="custom-font">Please Login</h2>
-            <button
-              onClick={handleGoogleSignIn}
-              className="btn btn-success w-80"
-            >
-              Google Sign In
-            </button>
-            <Link to="/register"> </Link>
+    <section className="mt-5">
+      <div>
+        <div className="login-box d-flex align-items-center justify-content-center">
+          <div className="login">
+            <div className="login-box">
+              <h2 className="custom-font">Please Login here with google</h2>
+              <button onClick={handleGoogleSignIn} className="custom-btn w-80">
+                Google Sign In
+              </button>
+              <Link to="/register"> </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

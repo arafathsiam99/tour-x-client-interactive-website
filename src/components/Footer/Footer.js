@@ -17,16 +17,16 @@ const Footer = () => {
             <h3>Follow Us:</h3>
             <div className="d-flex align-items-center justify-content-center">
               <div className="m-2 p-2">
-                <i class="fab fa-facebook"></i>
+                <i className="fab fa-facebook"></i>
               </div>
               <div className="m-2 p-2">
-                <i class="fab fa-linkedin-in"></i>
+                <i className="fab fa-linkedin-in"></i>
               </div>
               <div className="m-2 p-2">
-                <i class="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
               </div>
               <div className="m-2 p-2">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
               </div>
             </div>
           </div>
@@ -34,11 +34,11 @@ const Footer = () => {
             <h2>Contact Us</h2>
             <div>
               <div className="mt-2">
-                <i class="fas fa-phone"></i>
+                <i className="fas fa-phone"></i>
                 :+01852-1265122
               </div>
               <div className="mt-2">
-                <i class="fas fa-envelope"></i>
+                <i className="fas fa-envelope"></i>
                 :support@example.com
               </div>
             </div>
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
       </section>
       <hr className="w-75 m-auto" />
-      <section>
+      <section className="mt-3">
         <p>
           Copyright 2021 <span className="custom-font">TourX</span> | Design By{" "}
           <span className="custom-font">Md.Arafath Islam Siam</span>

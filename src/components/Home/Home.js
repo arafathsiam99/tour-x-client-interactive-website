@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { ButtonGroup, Card, Button, Carousel } from "react-bootstrap";
+import React from "react";
+import { ButtonGroup, Card, Carousel } from "react-bootstrap";
 import Packages from "../Packages/Packages";
 import "./Home.css";
 
@@ -52,21 +52,22 @@ const Home = () => {
         <h1>
           Select Your Best Package <br /> For Your Travel
         </h1>
-        <Packages></Packages>
       </section>
+      <Packages></Packages>
 
       {/* Client Section */}
 
-      <section className="mt-5">
+      <section className="mt-5 container">
         <h4 className="custom-top">Our Traveller Say</h4>
         <h1>
           What Our Traveller Say <br />
           About Us
         </h1>
-        <div className="row g-4 mt-5">
-          <div className="col-md-4 custom-box">
-            <div>
+        <div className="row text-center mt-5">
+          <div className="col-md-4">
+            <div className="shadow-sm mx-3 my-3 p-3">
               <img
+                className="rounded-circle"
                 src="https://i.ibb.co/kJJq9zD/reviewer-1-07859027.png"
                 alt=""
               />
@@ -80,9 +81,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col-md-4 custom-box">
-            <div>
+            <div className="shadow-sm mx-3 my-3 p-3">
               <img
-                className="custom-img"
+                className="rounded-circle"
                 src="https://i.ibb.co/F0cghBB/reviewer-2-52e03342.png"
                 alt=""
               />
@@ -96,9 +97,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col-md-4 custom-box">
-            <div>
+            <div className="shadow-sm mx-3 my-3 p-3">
               <img
-                className="custom-img"
+                className="rounded-circle"
                 src="https://i.ibb.co/zGwtsRR/reviewer-3-21d99f5c.png"
                 alt=""
               />
@@ -115,65 +116,71 @@ const Home = () => {
       </section>
 
       {/* Blog Section */}
-      <section className="mt-5">
+      <section className="mt-5 container">
         <h4 className="custom-top">Latest Blog</h4>
         <h1>
           Stay Updated And New <br /> Post Our Blog
         </h1>
-        <div className="row custom-card">
+        <div className="row text-center">
           <div className="col-md-4">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img src="https://i.ibb.co/zRZ6D8w/b-1-64c64476.png" />
-              <Card.Body>
-                <Card.Title>Dina James</Card.Title>
-                <Card.Text>
-                  I’ve realized that it’s been a while since I last talked about
-                  the best travel blogs out there — the ones I read — so I
-                  wanted to take a moment and highlight some of my favorite
-                  travel blogs that can also help you travel better, cheaper,
-                  and smarter
-                </Card.Text>
-                <ButtonGroup className="custom-btn" variant="primary">
-                  Read More
-                </ButtonGroup>
-              </Card.Body>
-            </Card>
+            <div className="shadow-sm mx-3 my-3">
+              <Card>
+                <Card.Img src="https://i.ibb.co/zRZ6D8w/b-1-64c64476.png" />
+                <Card.Body>
+                  <Card.Title>Dina James</Card.Title>
+                  <Card.Text>
+                    I’ve realized that it’s been a while since I last talked
+                    about the best travel blogs out there — the ones I read — so
+                    I wanted to take a moment and highlight some of my favorite
+                    travel blogs that can also help you travel better, cheaper,
+                    and smarter
+                  </Card.Text>
+                  <ButtonGroup className="custom-btn" variant="primary">
+                    Read More
+                  </ButtonGroup>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
           <div className="col-md-4">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img src="https://i.ibb.co/qNrdPNP/b-2-83389c8c.png" />
-              <Card.Body>
-                <Card.Title>Lina Paul</Card.Title>
-                <Card.Text>
-                  I’ve realized that it’s been a while since I last talked about
-                  the best travel blogs out there — the ones I read — so I
-                  wanted to take a moment and highlight some of my favorite
-                  travel blogs that can also help you travel better, cheaper,
-                  and smarter
-                </Card.Text>
-                <ButtonGroup className="custom-btn" variant="primary">
-                  Read More
-                </ButtonGroup>
-              </Card.Body>
-            </Card>
+            <div className="shadow-sm mx-3 my-3">
+              <Card>
+                <Card.Img src="https://i.ibb.co/qNrdPNP/b-2-83389c8c.png" />
+                <Card.Body>
+                  <Card.Title>Lina Paul</Card.Title>
+                  <Card.Text>
+                    I’ve realized that it’s been a while since I last talked
+                    about the best travel blogs out there — the ones I read — so
+                    I wanted to take a moment and highlight some of my favorite
+                    travel blogs that can also help you travel better, cheaper,
+                    and smarter
+                  </Card.Text>
+                  <ButtonGroup className="custom-btn" variant="primary">
+                    Read More
+                  </ButtonGroup>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
           <div className="col-md-4">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img src="https://i.ibb.co/2K1mVgt/b-3-f3e9c0bd.png" />
-              <Card.Body>
-                <Card.Title>Monica Gonjalez</Card.Title>
-                <Card.Text>
-                  I’ve realized that it’s been a while since I last talked about
-                  the best travel blogs out there — the ones I read — so I
-                  wanted to take a moment and highlight some of my favorite
-                  travel blogs that can also help you travel better, cheaper,
-                  and smarter
-                </Card.Text>
-                <ButtonGroup className="custom-btn" variant="primary">
-                  Read More
-                </ButtonGroup>
-              </Card.Body>
-            </Card>
+            <div className="shadow-sm mx-3 my-3">
+              <Card>
+                <Card.Img src="https://i.ibb.co/2K1mVgt/b-3-f3e9c0bd.png" />
+                <Card.Body>
+                  <Card.Title>Monica Gonjalez</Card.Title>
+                  <Card.Text>
+                    I’ve realized that it’s been a while since I last talked
+                    about the best travel blogs out there — the ones I read — so
+                    I wanted to take a moment and highlight some of my favorite
+                    travel blogs that can also help you travel better, cheaper,
+                    and smarter
+                  </Card.Text>
+                  <ButtonGroup className="custom-btn" variant="primary">
+                    Read More
+                  </ButtonGroup>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

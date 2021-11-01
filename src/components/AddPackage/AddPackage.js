@@ -5,7 +5,6 @@ const AddPackage = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
@@ -19,7 +18,7 @@ const AddPackage = () => {
   };
   return (
     <div className="my-5">
-      <h2 className="custom-top">Add A Package</h2>
+      <h2 className="custom-top">Add A New Package</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           className="p-2 m-2"

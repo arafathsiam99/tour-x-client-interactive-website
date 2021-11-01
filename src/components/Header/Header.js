@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
 import "./Header.css";
 
@@ -22,9 +22,24 @@ const Header = () => {
               <NavLink className="custom-link" to="/home">
                 Home
               </NavLink>
-              <NavLink className="custom-link" to="/addpackage">
-                AddPackage
-              </NavLink>
+
+              {user?.email && (
+                <NavLink className="custom-link" to="/myorders">
+                  My Orders
+                </NavLink>
+              )}
+
+              {user?.email && (
+                <NavLink className="custom-link" to="/addpackage">
+                  Add A New Package
+                </NavLink>
+              )}
+              {user?.email && (
+                <NavLink className="custom-link" to="/manageallpackage">
+                  Manage All Package
+                </NavLink>
+              )}
+
               {!user?.email ? (
                 <NavLink className="custom-link" to="/login">
                   Login
