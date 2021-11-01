@@ -2,7 +2,7 @@
 
 # Making TourX-Tourism
 
-This project is made with react js [Visit Here](https://gymx-fitness.web.app/).
+This project is made with react js [Visit Here](https://tourx-tourism.web.app/).
 
 ## About Project
 
